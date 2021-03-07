@@ -23,6 +23,8 @@ const schema = Joi.object({
     .required(),
 
   password: Joi.string().min(6).required(),
+
+  repeat_password: Joi.ref('password'),
 });
 
 // any router in here is pre-pended with /auth
@@ -33,7 +35,6 @@ router.get('/signup', (req, res) => {
 });
 
 // POST /auth/signup
-
 router.post('/signup', (req, res, next) => {
   const result = schema.validate(req.body);
   if (result.error === undefined) {
