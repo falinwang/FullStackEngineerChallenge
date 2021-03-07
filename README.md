@@ -48,6 +48,7 @@ You can also update the usernames or delete users.
  - [ ] Admin - add/update/view reviews
  - [ ] Employee - View list
  - [ ] Employee - Add and submit feedback
+ - [ ] Deploy production
 ![](assets/tasks.png)
 ![](assets/database.png)
 
