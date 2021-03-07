@@ -2,6 +2,9 @@
 Fa-Lin (Roy) Wang
 
 ## Table of Contents
+- Project Description
+- How to Run
+- How to Use
 - Requirements
 - Progress
 - Challenge Scope
@@ -24,6 +27,30 @@ You can view the list of employees with the button "View All Employees" below.
 You can also update the usernames or delete users.
 ![](assets/view.png)
 
+
+## Progress
+### Done
+ - [x] Initiate [Product Requirement Document](assets/PerfomanceReview_PRD.docx)
+ - [x] Create low-fidelity wireframes
+ - [x] Comparative analysis
+ - [x] Research which technology to use
+ - [x] Initiate environment
+ - [x] User authentication
+ - [x] Add employees
+ - [x] remove employees
+ - [x] update employees
+ - [x] List of employees
+
+### Next Steps
+ - [ ] Implement reviews database
+ - [ ] Link 2 databases (employee and review)
+ - [ ] Implement authorization (admin and non-admin)
+ - [ ] Admin - add/update/view reviews
+ - [ ] Employee - View list
+ - [ ] Employee - Add and submit feedback
+![](assets/tasks.png)
+![](assets/database.png)
+
 ## Requirements
 Design a web application that allows employees to submit feedback toward each other's performance review.
 
@@ -37,12 +64,7 @@ Design a web application that allows employees to submit feedback toward each ot
 * List of performance reviews requiring feedback
 * Submit feedback
 
-## Progress
- - [x] User authentication
- - [x] Add employees
- - [x] remove employees
- - [x] update employees
- - [x] List of employees
+
 
 ## Challenge Scope
 * High level description of design and technologies used
