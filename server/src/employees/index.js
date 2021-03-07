@@ -32,7 +32,7 @@ router.put('/update', (req, res) => {
   );
 });
 
-// DELETE employee
+// DELETE employee with id
 router.delete('/delete/:id', (req, res) => {
   const { id } = req.params;
   db.query('DELETE FROM employees WHERE id = ?', id, (err, result) => {

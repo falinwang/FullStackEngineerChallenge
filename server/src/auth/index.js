@@ -5,6 +5,7 @@ const db = require('../db/connection');
 
 const router = express.Router();
 
+// Validate the input using Joi
 const schema = Joi.object({
   username: Joi.string().min(2).max(30).required(),
 

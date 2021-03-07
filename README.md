@@ -28,7 +28,23 @@ You can also update the usernames or delete users.
 ![](assets/view.png)
 
 
-## Progress
+## Progress 
+- [x] High level description of design and technologies used
+- [x] Server side API (Express and MySQL)
+  - [x] GET /auth
+  - [x] POST /auth/signup
+  - [x] GET /employees
+  - [x] PUT /employees/update
+  - [x] DELETE /employees/delete/:id
+- [x] Web app (React APP)
+  - [x] Components: Navigation
+    - responsive and with button to tap on on mobile
+  - [x] Components: Footer
+  - [x] Components: Sign Up Form
+    - [x] integrate with /auth/signup API and add profile data to database
+  - [x] Components: View All Employees
+    - [x] integrate with GET/PUT/DELETE /employees APIS
+    - [x] list out all the employee on the list
 ### Done
  - [x] Initiate [Product Requirement Document](assets/PerfomanceReview_PRD.docx)
  - [x] Create low-fidelity wireframes
