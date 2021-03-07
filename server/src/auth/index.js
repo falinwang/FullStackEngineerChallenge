@@ -1,14 +1,7 @@
 const express = require('express');
 const Joi = require('joi');
 const bcrypt = require('bcryptjs');
-const mysql = require('mysql');
-
-const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '123456',
-  database: 'employeeSystem',
-});
+const db = require('../db/connection');
 
 const router = express.Router();
 
@@ -28,7 +21,7 @@ const schema = Joi.object({
 });
 
 // any router in here is pre-pended with /auth
-router.get('/signup', (req, res) => {
+router.get('/', (req, res) => {
   res.json({
     message: 'auth, 🔐',
   });
@@ -36,8 +29,8 @@ router.get('/signup', (req, res) => {
 
 // POST /auth/signup
 router.post('/signup', (req, res, next) => {
-  const result = schema.validate(req.body);
-  if (result.error === undefined) {
+  const value = schema.validate(req.body);
+  if (value.error === undefined) {
     const { username, email, password } = req.body;
     const hash = bcrypt.hashSync(password);
 
@@ -53,7 +46,7 @@ router.post('/signup', (req, res, next) => {
       }
     );
   } else {
-    next(result.error);
+    next(value.error);
   }
 });
 

@@ -7,12 +7,13 @@ require('dotenv').config();
 
 const middlewares = require('./middlewares');
 const auth = require('./auth');
+const employees = require('./employees');
 
 const app = express();
 
 app.use(morgan('dev'));
 app.use(helmet());
-app.use(cors);
+app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -22,6 +23,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/auth', auth);
+app.use('/employees', employees);
 
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);

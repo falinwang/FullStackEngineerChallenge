@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { ReactComponent as Logo } from '../../assets/tower.svg';
-
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
