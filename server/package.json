@@ -10,10 +10,10 @@
     "test": "mocha --exit"
   },
   "keywords": [],
-  "author": "CJ R. <cj@null.computer> (https://w3cj.now.sh)",
+  "author": "Fa-Lin Wang <royflw@gmail.com> (https://roywannago.com)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/w3cj/express-api-starter.git"
+    "url": "https://github.com/falinwang/FullStackEngineerChallenge"
   },
   "license": "MIT",
   "dependencies": {

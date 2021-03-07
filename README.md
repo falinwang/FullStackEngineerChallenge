@@ -1,11 +1,33 @@
 # Full Stack Developer Challenge
-This is an interview challengs. Please feel free to fork. Pull Requests will be ignored.
+Fa-Lin (Roy) Wang
+
+## Table of Contents
+- Requirements
+- Progress
+- Challenge Scope
+
+## Project Description
+I create a CRUD employee performance review website using React, Express, Node.js, MySQL, and Tailwind CSS. The website allows users to create new accounts and stores hashed information using bcrypt on the database using MySQL. The front end is created using React.js and React Hook, cooperating with the utility-first CSS framework, and it is responsive and mobile-friendly. The backend is written in Node.js ES6.
+
+## How to Run
+- Local on Mac
+1. First, you would need to install the dependencies with `npm install` in both server and client side.
+2. For client, move to `/client` and run `npm start`, the default is run on [port 3000](http://localhost:3000/).
+3. For server, open another terminal tap to `/server` and run `npm start`, the default is run on port 5000
+4. When you open them successfully, you should see the screen like below.
+
+## How to Use
+You can sign up using username (required), email (required) and password more then 6 digits.
+![](assets/signup.png)
+
+You can view the list of employees with the button "View All Employees" below.
+You can also update the usernames or delete users.
+![](assets/view.png)
 
 ## Requirements
 Design a web application that allows employees to submit feedback toward each other's performance review.
 
 *Partial solutions are acceptable.*  It is not necessary to submit a complete solution that implements every requirement.
-
 ### Admin view
 * Add/remove/update/view employees
 * Add/update/view performance reviews
@@ -14,6 +36,13 @@ Design a web application that allows employees to submit feedback toward each ot
 ### Employee view
 * List of performance reviews requiring feedback
 * Submit feedback
+
+## Progress
+ - [x] User authentication
+ - [x] Add employees
+ - [x] remove employees
+ - [x] update employees
+ - [x] List of employees
 
 ## Challenge Scope
 * High level description of design and technologies used
@@ -26,13 +55,5 @@ Design a web application that allows employees to submit feedback toward each ot
 * Document all assumptions made
 * Complete solutions aren't required, but what you do submit needs to run.
 
-## How to complete this challenge
-* Fork this repo in github
-* Complete the design and code as defined to the best of your abilities
-* Place notes in your code to help with clarity where appropriate. Make it readable enough to present to the PayPay interview team
-* Complete your work in your own github repo and send the results to us and/or present them during your interview
-
-## What are we looking for? What does this prove?
-* Assumptions you make given limited requirements
-* Technology and design choices
-* Identify areas of your strengths
+## Reference
+- [Tailwind Starter Kit by Creative Tim](https://www.creative-tim.com)
