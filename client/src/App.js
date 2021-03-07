@@ -1,14 +1,28 @@
 import './App.css';
 import { useState } from 'react';
+import Axios from 'axios';
 import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
 
 function App() {
-  const [name, setName] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [repeat_password, setRepeatPassword] = useState('');
+  const [email, setEmail] = useState('');
+
+  const addEmployee = () => {
+    Axios.post('http://localhost:5000/auth/signup', {
+      username: username,
+      email: email,
+      password: password,
+      repeat_password: repeat_password,
+    }).then(() => {
+      console.log('success');
+    });
+  };
 
   const displayInfo = () => {
-    console.log(name, password);
+    console.log(username, email, password);
   };
 
   return (
@@ -29,6 +43,24 @@ function App() {
                       className='block uppercase text-gray-700 text-xs font-bold mb-2'
                       htmlFor='grid-password'
                     >
+                      Username
+                    </label>
+                    <input
+                      type='text'
+                      className='px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full'
+                      placeholder='Username'
+                      style={{ transition: 'all .15s ease' }}
+                      onChange={(event) => {
+                        setUsername(event.target.value);
+                      }}
+                    />
+                  </div>
+
+                  <div className='relative w-full mb-3'>
+                    <label
+                      className='block uppercase text-gray-700 text-xs font-bold mb-2'
+                      htmlFor='grid-password'
+                    >
                       Email
                     </label>
                     <input
@@ -37,7 +69,7 @@ function App() {
                       placeholder='Email'
                       style={{ transition: 'all .15s ease' }}
                       onChange={(event) => {
-                        setName(event.target.value);
+                        setEmail(event.target.value);
                       }}
                     />
                   </div>
@@ -70,8 +102,11 @@ function App() {
                     <input
                       type='password'
                       className='px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full'
-                      placeholder='Password'
+                      placeholder='Confirm Password'
                       style={{ transition: 'all .15s ease' }}
+                      onChange={(event) => {
+                        setRepeatPassword(event.target.value);
+                      }}
                     />
                   </div>
                   <div>
@@ -92,7 +127,7 @@ function App() {
                       className='bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full'
                       type='button'
                       style={{ transition: 'all .15s ease' }}
-                      onClick={displayInfo}
+                      onClick={addEmployee}
                     >
                       Create an account
                     </button>
